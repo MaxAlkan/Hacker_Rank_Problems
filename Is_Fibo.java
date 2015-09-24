@@ -4,6 +4,14 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+*/
+Input is as follows:
+3 (# of test cases)
+54245238
+213951235
+12311490051
+*/
+
 public class Is_Fibo {
 
 //Custom method for finding the sqrt of a BigInteger
