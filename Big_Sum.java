@@ -9,6 +9,12 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+/*
+Input is of the following example:
+5
+10001 10002 10003 10004 10005
+*/
+
 public class Big_Sum {
 
     /**
