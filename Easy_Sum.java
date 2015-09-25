@@ -29,18 +29,11 @@ public class Easy_Sum {
             BigInteger n = new BigInteger(a[0]);
             BigInteger m = new BigInteger(a[1]);
             BigInteger total = new BigInteger("0");
-            BigInteger subTotal = new BigInteger("0");
-            
-            //We dont sum to m, since the m % m = 0
-            if(n.remainder(m).equals(new BigInteger("0"))) {
-                total = n.divide(m).multiply(sum(m.subtract(new BigInteger("1"))));
-                System.out.println(total);
-            }
-            else {
-                subTotal = n.divide(m).multiply(sum(m.subtract(new BigInteger("1"))));
-                subTotal = subTotal.add(sum(n.remainder(m))); 
-                System.out.println(subTotal);
-            }
+
+            //Split to make reading easier
+             total = n.divide(m).multiply(sum(m.subtract(new BigInteger("1"))));
+             total = Total.add(sum(n.remainder(m))); 
+             System.out.println(total);
         }
     }   
 }
