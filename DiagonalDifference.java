@@ -9,23 +9,24 @@ public class DiagonalDifference {
  * 11 2 4
  * 4  5 6
  * 10 8 -12
+ which produces 15
  */
 	
 	public static void main(String[] args) {
 		
 		Scanner s = new Scanner(System.in);
-		int n = s.nextInt();
-		s.nextLine();
-		int index = 0;
-		int sum = 0;
-		String[] row;
+		int n = s.nextInt();	//dimension of the matrix
+		s.nextLine();		//ignores the enter after n is given
+		int index = 0;		//used for selecting the correct elements from row[]
+		int sum = 0;		//The diagonal difference, before the absolute value
+		String[] row;		//the ith row of a matrix
 		
 		while(n-- > 0) {
-			row = s.nextLine().split(" ");
-			sum += (Integer.parseInt(row[index]) - Integer.parseInt(row[n]));
+			row = s.nextLine().split(" ");		//grabs the String input and converts into String[]
+			sum += (Integer.parseInt(row[index]) - Integer.parseInt(row[n]));	//we don't need n-1 because of n-- in while loop
 			index++;
 		}
 		
-		System.out.println(Math.abs(sum));
+		System.out.println(Math.abs(sum));		//prints the absolute value of the sum, our desired answer
 	}
 }
